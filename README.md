@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/jlooper/olympic-app)
-=======
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/olympic-app/)
->>>>>>> 42779f0806f756f80fdd9e57528809f92cda1dda
 
 # An app all about the 2020 Tokyo Olympics, postponed to Summer 2021!
 
