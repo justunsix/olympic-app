@@ -1,5 +1,13 @@
 # An app all about the 2020 Tokyo Olympics, postponed to Summer 2021!
 
+## Background
+
+Building a flippable trading card app featuring all the 2021 Tokyo Summer Olympics sporting events following [Microsoft Build session](https://mybuild.microsoft.com/sessions/e6809457-5189-4442-99d7-a7ea45649c19?source=schedule) with [Jen Looper](https://www.jenlooper.com/). Remix [Olympics sports](https://olympics.com/en/sports/summer-olympics) on a page.
+
+- Mobile friendly, responsive design
+
+## Original Background
+
 This is the Student Branch of the Olympic App, which we can build together at Microsoft Build. Welcome, students and learners of all type.
 
 To get started, fork this version of the app and open it in [Visual Studio Code](https://code.visualstudio.com/). Look for the medal emoji to follow the steps and build this app. The complete app is built on the 'main' branch.
