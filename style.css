@@ -13,17 +13,17 @@ body {
 /* 🥇 style the grid id and the .flip-card class, see Mozilla web docs for CSS Grid */
 
 #grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 1rem;
-    justify-items: center;
-    align-items: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 1rem;
+	justify-items: center;
+	align-items: center;
 }
 
 .flip-card {
-    width: 100%;
-    height: 50 vh;
-    perspective: 1000px;
+	width: 100%;
+	height: 50vh;
+	perspective: 1000px;
 }
 
 /* 🥈 style the inner cards and get them ready to flip on hover */
