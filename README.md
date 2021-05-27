@@ -1,3 +1,7 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/olympic-app/)
+
+See Student git branch for edited files
+
 # An app all about the 2020 Tokyo Olympics, postponed to Summer 2021!
 
 Using Vite, Vanilla JS, and CSS Grid, let's create a card-flipping app!
