@@ -1,6 +1,8 @@
+# An app all about the 2020 Tokyo Olympics, postponed to Summer 2021!
+
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/olympic-app/)
 
-# An app all about the 2020 Tokyo Olympics, postponed to Summer 2021!
+See `.gitpod.yml` for build and run instructions for applications.
 
 ## Background
 
