@@ -2,7 +2,7 @@
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/olympic-app/tree/student)
 
-See `.gitpod.yml` for build and run instructions for applications.
+See below or [`.gitpod.yml`](https://github.com/justintungonline/olympic-app/blob/student/.gitpod.yml) for build and run instructions for application.
 
 ## Background
 
