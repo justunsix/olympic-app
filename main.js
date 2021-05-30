@@ -8,6 +8,7 @@ import data from './olympic-sports.json'
 let div = document.getElementById('grid');
 
 for (var i = 0; i < data.length; i++) {
+	// DOM changes using https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
 	div.insertAdjacentHTML(
 		'beforeend',
 		'<div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="/' +
