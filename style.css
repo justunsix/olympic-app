@@ -69,7 +69,7 @@ and the its inner .flip-card-inner element will rotate on the Y axis, 180 degree
 }
 
 img {
-  margin: 0px;
+	margin: 0px;
 	padding: 0px;
 	height: 20vh;
 	overflow: hidden;
@@ -78,8 +78,8 @@ img {
 	width: 100%;
 }
 
-.description{
-  padding: 10px
+.description {
+	padding: 10px;
 }
 
 h2 {

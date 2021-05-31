@@ -1,8 +1,8 @@
 # An app all about the 2020 Tokyo Olympics, postponed to Summer 2021!
 
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/olympic-app/tree/student)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/olympic-app)
 
-See below or [`.gitpod.yml`](https://github.com/justintungonline/olympic-app/blob/student/.gitpod.yml) for build and run instructions for application.
+See below or `.gitpod.yml` for build and run instructions for application.
 
 ## Background
 
@@ -10,19 +10,21 @@ Building a flippable trading card app featuring all the 2021 Tokyo Summer Olympi
 
 - Mobile friendly, responsive design
 
-## Original Background
+## Student Learning Background
 
-This is the Student Branch of the Olympic App, which we can build together at Microsoft Build. Welcome, students and learners of all type.
+See Student Branch of the Olympic App, which we built together at Microsoft Build. Welcome, students and learners of all type.
 
 To get started, fork this version of the app and open it in [Visual Studio Code](https://code.visualstudio.com/). Look for the medal emoji to follow the steps and build this app. The complete app is built on the 'main' branch.
 
 To launch the app, type: `npm i` to install dependencies. Then, type `npm run dev` to run the app locally (usually on localhost:3000). Since the app only uses Vite and no other framework, your dependency install is lightweight.
 
----
+## About the Application
 
 Using Vite, Vanilla JS, and CSS Grid, let's create a card-flipping app!
 
 Vite will handle the architecture and module bundling, we will use Vanilla JS to avoid framework fatigue, and use CSS Grid for responsive design needs. The actual card flipping can be done using plain old CSS transforms.
+
+To run this app out of the box, make sure you have Node and NPM installed locally (see below for links). Fork the 'main' branch, navigate to the app root and, in your command line or terminal, type: `npm i` to install dependencies. Then, type `npm run dev` to run the app locally (usually on localhost:3000). Since the app only uses Vite and no other framework, your dependency install is lightweight.
 
 <img width="640" alt="screenshot" src="https://user-images.githubusercontent.com/1450004/117545887-af6df780-aff5-11eb-89cd-a8574aae6d27.png">
 
