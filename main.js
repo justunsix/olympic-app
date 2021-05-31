@@ -1,12 +1,15 @@
 import './style.css';
 
-//🥇
-import data from './olympic-sports.json';
+// 🥇 import your json data
+// Using Vite’s module management capability, import .json file data, JSON: JavaScript Object Notation
+import data from './olympic-sports.json'
 
-//🥈
+// 🥈 add a div reference here
+// Create a div by gettings its id and will append html elements to it 
 let div = document.getElementById('grid');
 
 for (var i = 0; i < data.length; i++) {
+	// DOM changes using Element.insertAdjacentHTML(), see more at Mozilla Web Docs
 	div.insertAdjacentHTML(
 		'beforeend',
 		'<div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="/' +

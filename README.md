@@ -1,8 +1,24 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/olympic-app/)
-
-See [Student git branch](https://github.com/justintungonline/olympic-app/tree/student) for edited files
-
 # An app all about the 2020 Tokyo Olympics, postponed to Summer 2021!
+
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/olympic-app)
+
+See below or `.gitpod.yml` for build and run instructions for application.
+
+## Background
+
+Building a flippable trading card app featuring all the 2021 Tokyo Summer Olympics sporting events following [Microsoft Build session](https://mybuild.microsoft.com/sessions/e6809457-5189-4442-99d7-a7ea45649c19?source=schedule) with [Jen Looper](https://www.jenlooper.com/). Remix [Olympics sports](https://olympics.com/en/sports/summer-olympics) on a page.
+
+- Mobile friendly, responsive design
+
+## Student Learning Background
+
+See Student Branch of the Olympic App, which we built together at Microsoft Build. Welcome, students and learners of all type.
+
+To get started, fork this version of the app and open it in [Visual Studio Code](https://code.visualstudio.com/). Look for the medal emoji to follow the steps and build this app. The complete app is built on the 'main' branch.
+
+To launch the app, type: `npm i` to install dependencies. Then, type `npm run dev` to run the app locally (usually on localhost:3000). Since the app only uses Vite and no other framework, your dependency install is lightweight.
+
+## About the Application
 
 Using Vite, Vanilla JS, and CSS Grid, let's create a card-flipping app!
 
