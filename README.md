@@ -112,7 +112,8 @@ heroku login
 
 # Set up application on Heroku
 heroku create
-# Tell Heroku to install dev dependencies
+# Tell Heroku to install dev dependencies per https://github.com/vitejs/vite/issues/1215
+# vite is by default installed as dev dependency and in production dev dependencies are not installed 
 heroku config:set NPM_CONFIG_PRODUCTION=false YARN_PRODUCTION=false
 git push heroku main
 
