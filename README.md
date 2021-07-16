@@ -119,20 +119,22 @@ az webapp up --name olympic-cards --logs --launch-browser
 # The --launch-browser command opens the default browser to the new app. 
 # Use the same command to redeploy the entire app again.
 
+# In a separate terminal
 # Set up user-level deployment credentials with Azure CLI
 az webapp deployment user set --user-name <username> --password <password>
 # If an error like: Operation returned an invalid status 'Conflict'
 # occurs, it may mean the username is taken or password is not complex enough.
 # Choose a different username and more complex password
 
-# Get and set a new remote
-# Get URL
+# Get and set a new remote and get the URL
 az webapp deployment source config-local-git --name <your_app_name>
 
 # Use URL at the end
 git remote add azure https://username12342345236@olympic-app.scm.azurewebsites.net/olympic-app.git
-
 # Push you code to Azure and enter your password when asked
+
+# View (tail) logs
+az webapp log tail --name olympic-cards
 
 
 
