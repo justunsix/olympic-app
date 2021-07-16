@@ -5,7 +5,7 @@
 		"dev": "vite",
 		"build": "vite build",
 		"serve": "vite preview",
-		"start": "vite --host"
+		"start": "vite --host --port $PORT"
 	},
 	"devDependencies": {
 		"vite": "^2.3.3"
