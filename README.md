@@ -90,3 +90,28 @@ az storage blob upload-batch -s dist -d '$web' --account-name mystorageaccount
 
 # Get the URL and visit it in a browser
 az storage account show -n mystorageaccount -g myresourcegroup --query "primaryEndpoints.web" --output tsv
+```
+
+## Deploy to on Heroku
+
+### Prerequisite
+
+- [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) 
+
+Can install using:
+
+```sh
+# make sure npm installation is latest
+npm install npm@latest -g
+
+# Install and build application
+npm i
+npm run build
+
+# install Heroku CLI and verify install
+npm install -g heroku
+heroku --version
+# Login using browser
+heroku login
+
+# Set up application on Heroku
