@@ -94,14 +94,10 @@ az storage account show -n mystorageaccount -g myresourcegroup --query "primaryE
 
 ## Deploy to on Heroku
 
-### Prerequisite
-
-- [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) 
-
-Can install using:
+Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) (optional) and set up folder. Execute these commands inside of the root directory of this repository.
 
 ```sh
-# make sure npm installation is latest
+# Make sure npm installation is latest
 npm install npm@latest -g
 
 # Install and build application
@@ -115,3 +111,5 @@ heroku --version
 heroku login
 
 # Set up application on Heroku
+heroku create
+```
