@@ -127,17 +127,16 @@ az webapp deployment user set --user-name <username> --password <password>
 # Choose a different username and more complex password
 
 # Get and set a new remote and get the URL
-az webapp deployment source config-local-git --name <your_app_name>
+az webapp deployment source config-local-git --name olympic-cards
 
 # Use URL at the end
 git remote add azure https://username12342345236@olympic-app.scm.azurewebsites.net/olympic-app.git
-# Push you code to Azure and enter your password when asked
+
+# Push you code to Azure and enter your password when asked. Instead of 'main', you may want to choose your branch to push to Azure
+git push azure main
 
 # View (tail) logs
 az webapp log tail --name olympic-cards
-
-
-
 ```
 
 ## Deploy to Heroku
