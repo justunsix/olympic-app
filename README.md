@@ -112,4 +112,8 @@ heroku login
 
 # Set up application on Heroku
 heroku create
+git push heroku main
+
+# Open site in browser
+heroku open
 ```
