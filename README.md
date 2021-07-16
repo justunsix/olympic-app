@@ -43,7 +43,7 @@ Learn [how to develop applications](https://docs.microsoft.com/en-us/learn/paths
 
 Build a [terrarium with JS/CSS/HTML](https://aka.ms/terrarium)
 
-## Deploy to a Azure Static Web
+## Deploy to Azure Static Website
 
 Follow the steps at [Building your first static site using the Azure CLI](https://docs.microsoft.com/en-us/azure/static-web-apps/get-started-cli?tabs=vue). Instead of using a new repository, use this repository and in the command line section, execute something like the following. 
 
@@ -67,7 +67,7 @@ az staticwebapp create \
 - "dist" is used to match to Vue-like framework used for this application.
 - --sku free creates the site under a free site which has limits
 
-## Deploy to a Static site in an Azure Storage Account
+## Deploy to Azure Storage Account Static Site
 
 Follow instructions to upload the [site to a static site](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website-how-to?tabs=azure-portal) using Azure storage account blobs.
 
@@ -90,6 +90,52 @@ az storage blob upload-batch -s dist -d '$web' --account-name mystorageaccount
 
 # Get the URL and visit it in a browser
 az storage account show -n mystorageaccount -g myresourcegroup --query "primaryEndpoints.web" --output tsv
+```
+
+## Deploy to Azure App Service
+
+Requires: 
+
+- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/authenticate-azure-cli) installed or use [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart) using the bash environment 
+- Node 10.x or higher
+
+```sh
+# Log into Azure
+az login
+
+# Create resource group and set as default values to avoid specifying them each time later
+az group create --name myResourceGroup --location westus
+az config set defaults.group=myResourceGroup defaults.location=westus
+
+# Create an App Service plan using Linux in free tier.
+az appservice plan create --name olympic-cards --resource-group myResourceGroup --sku FREE --is-linux
+
+# Create and deploy web app service with Azure CLI command
+# Get run times using command: az webapp list-runtimes --linux
+# Use node 10+ per package-lock.json engines
+az webapp create --name olympic-cards --resource-group myResourceGroup --plan olympic-cards --runtime "node|10.14" --deployment-local-git
+az webapp up --name olympic-cards --logs --launch-browser
+# The --logs command displays the log stream immediately after launching the webapp. 
+# The --launch-browser command opens the default browser to the new app. 
+# Use the same command to redeploy the entire app again.
+
+# Set up user-level deployment credentials with Azure CLI
+az webapp deployment user set --user-name <username> --password <password>
+# If an error like: Operation returned an invalid status 'Conflict'
+# occurs, it may mean the username is taken or password is not complex enough.
+# Choose a different username and more complex password
+
+# Get and set a new remote
+# Get URL
+az webapp deployment source config-local-git --name <your_app_name>
+
+# Use URL at the end
+git remote add azure https://username12342345236@olympic-app.scm.azurewebsites.net/olympic-app.git
+
+# Push you code to Azure and enter your password when asked
+
+
+
 ```
 
 ## Deploy to Heroku

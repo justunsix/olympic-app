@@ -5,7 +5,9 @@
 		"dev": "vite",
 		"build": "vite build",
 		"serve": "vite preview",
-		"start": "vite --host --port $PORT"
+		"start-heroku": "vite --host --port $PORT",
+		"start-azure-app-service": "vite --host",
+		"start": "vite --host"
 	},
 	"devDependencies": {
 		"vite": "^2.3.3"
