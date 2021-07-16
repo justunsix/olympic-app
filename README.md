@@ -92,7 +92,7 @@ az storage blob upload-batch -s dist -d '$web' --account-name mystorageaccount
 az storage account show -n mystorageaccount -g myresourcegroup --query "primaryEndpoints.web" --output tsv
 ```
 
-## Deploy to on Heroku
+## Deploy to Heroku
 
 Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) (optional) and set up folder. Execute these commands inside of the root directory of this repository.
 
