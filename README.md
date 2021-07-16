@@ -115,7 +115,7 @@ heroku create
 # Tell Heroku to install dev dependencies per https://github.com/vitejs/vite/issues/1215
 # vite is by default installed as dev dependency and in production dev dependencies are not installed 
 heroku config:set NPM_CONFIG_PRODUCTION=false YARN_PRODUCTION=false
-# Push to remote heroku for build which does install and runs start script in package.json
+# Push to remote heroku for build which does install and runs start script in package.json using vite --host --port $PORT
 git push heroku main
 
 # Open site in browser
