@@ -112,6 +112,8 @@ heroku login
 
 # Set up application on Heroku
 heroku create
+# Tell Heroku to install dev dependencies
+heroku config:set NPM_CONFIG_PRODUCTION=false YARN_PRODUCTION=false
 git push heroku main
 
 # Open site in browser
