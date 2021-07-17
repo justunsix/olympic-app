@@ -113,8 +113,10 @@ az appservice plan create --name olympic-cards --resource-group myResourceGroup 
 # Create and deploy web app service with Azure CLI command
 # Get run times using command: az webapp list-runtimes --linux
 # Use node 10+ per package-lock.json engines
-az webapp create --name olympic-cards --resource-group myResourceGroup --plan olympic-cards --runtime "node|10.14" --deployment-local-git
-az webapp up --name olympic-cards --logs --launch-browser
+az webapp create --name olympic-cards --resource-group myResourceGroup --plan olympic-cards --runtime "NODE|14-lts" --deployment-local-git --deployment-source-branch main
+
+# Optional zip deployment
+# az webapp up --name olympic-cards --logs --launch-browser
 # The --logs command displays the log stream immediately after launching the webapp. 
 # The --launch-browser command opens the default browser to the new app. 
 # Use the same command to redeploy the entire app again.
@@ -126,14 +128,20 @@ az webapp deployment user set --user-name <username> --password <password>
 # occurs, it may mean the username is taken or password is not complex enough.
 # Choose a different username and more complex password
 
-# Get and set a new remote and get the URL
+# Get new remote git URL
 az webapp deployment source config-local-git --name olympic-cards
 
-# Use URL at the end
+# Add remote URL to git repo
 git remote add azure https://username12342345236@olympic-app.scm.azurewebsites.net/olympic-app.git
 
-# Push you code to Azure and enter your password when asked. Instead of 'main', you may want to choose your branch to push to Azure
-git push azure main
+# Unix 
+# url=$(az webapp deployment source config-local-git --name olympic-cards --resource-group myResourceGroup --query url --output tsv)
+# git remote add azure $url
+
+# Push you code to Azure and enter your password when asked. 
+# Instead of 'main', you may want to choose your branch to push to Azure. 
+# master is required after your local branch to ensure it pushes to the branch read for Azure deployment
+git push azure main:master
 
 # View (tail) logs
 az webapp log tail --name olympic-cards
