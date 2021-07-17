@@ -94,7 +94,13 @@ az storage account show -n mystorageaccount -g myresourcegroup --query "primaryE
 
 ## Deploy to Azure App Service
 
-Requires: 
+### Using GitHub Actions
+
+See [Deploy to App Service using GitHub Actions](https://docs.microsoft.com/en-us/azure/app-service/deploy-continuous-deployment?tabs=github).
+
+### Using CLI
+
+Requires:
 
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/authenticate-azure-cli) installed or use [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart) using the bash environment 
 - Node 10.x or higher
