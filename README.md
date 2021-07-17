@@ -119,34 +119,36 @@ az appservice plan create --name olympic-cards --resource-group myResourceGroup 
 # Create and deploy web app service with Azure CLI command
 # Get run times using command: az webapp list-runtimes --linux
 # Use node 10+ per package-lock.json engines
-az webapp create --name olympic-cards --resource-group myResourceGroup --plan olympic-cards --runtime "NODE|14-lts" --deployment-local-git --deployment-source-branch main
+az webapp create --name olympic-cards --resource-group myResourceGroup --plan olympic-cards --runtime "NODE|14-lts" --deployment-source-url https://github.com/justintungonline/olympic-app.git --deployment-source-branch main
 
+# Set npm settings to include vite
+az webapp config appsettings set --name olympic-cards --resource-group myResourceGroup --settings NPM_CONFIG_PRODUCTION="false" 
+az webapp config appsettings set --name olympic-cards --resource-group myResourceGroup --settings YARN_PRODUCTION="false"
+
+# Alternate of above to use a local git for deployment
+az webapp create --name olympic-cards --resource-group myResourceGroup --plan olympic-cards --runtime "NODE|14-lts" --deployment-local-git
 # Optional zip deployment
 # az webapp up --name olympic-cards --logs --launch-browser
 # The --logs command displays the log stream immediately after launching the webapp. 
 # The --launch-browser command opens the default browser to the new app. 
 # Use the same command to redeploy the entire app again.
 
-# In a separate terminal
-# Set up user-level deployment credentials with Azure CLI
+# In a separate terminal, set up user-level deployment credentials with Azure CLI
 az webapp deployment user set --user-name <username> --password <password>
 # If an error like: Operation returned an invalid status 'Conflict'
 # occurs, it may mean the username is taken or password is not complex enough.
 # Choose a different username and more complex password
 
-# Get new remote git URL
+# For "--deployment-local-git", get new remote git URL 
 az webapp deployment source config-local-git --name olympic-cards
-
 # Add remote URL to git repo
 git remote add azure https://username12342345236@olympic-app.scm.azurewebsites.net/olympic-app.git
-# Set npm settings to include vite
-az webapp config appsettings set --name olympic-cards --resource-group myResourceGroup --settings NPM_CONFIG_PRODUCTION="false" 
-az webapp config appsettings set --name olympic-cards --resource-group myResourceGroup --settings YARN_PRODUCTION="false"
 
-# Unix 
-# url=$(az webapp deployment source config-local-git --name olympic-cards --resource-group myResourceGroup --query url --output tsv)
+# For "--deployment-local-git",
+# Unit, url=$(az webapp deployment source config-local-git --name olympic-cards --resource-group myResourceGroup --query url --output tsv)
 # git remote add azure $url
 
+# For "--deployment-local-git",
 # Push you code to Azure and enter your password when asked. 
 # Instead of 'main', you may want to choose your branch to push to Azure. 
 # master is required after your local branch to ensure it pushes to the branch read for Azure deployment
