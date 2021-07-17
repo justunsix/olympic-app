@@ -133,8 +133,9 @@ az webapp deployment source config-local-git --name olympic-cards
 
 # Add remote URL to git repo
 git remote add azure https://username12342345236@olympic-app.scm.azurewebsites.net/olympic-app.git
-# Set npm settings
-# ....NPM_CONFIG_PRODUCTION=false YARN_PRODUCTION=false
+# Set npm settings to include vite
+az webapp config appsettings set --name olympic-cards --resource-group myResourceGroup --settings NPM_CONFIG_PRODUCTION="false" 
+az webapp config appsettings set --name olympic-cards --resource-group myResourceGroup --settings YARN_PRODUCTION="false"
 
 # Unix 
 # url=$(az webapp deployment source config-local-git --name olympic-cards --resource-group myResourceGroup --query url --output tsv)
