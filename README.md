@@ -148,6 +148,9 @@ git push azure main:master
 
 # View (tail) logs
 az webapp log tail --name olympic-cards
+
+# Optionally remove resources to avoid costs
+az group delete --name myResourceGroup
 ```
 
 ## Deploy to Heroku
