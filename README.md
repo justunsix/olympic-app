@@ -142,16 +142,16 @@ az webapp deployment user set --user-name <username> --password <password>
 # For "--deployment-local-git", get new remote git URL 
 az webapp deployment source config-local-git --name olympic-cards
 # Add remote URL to git repo
-git remote add azure https://username12342345236@olympic-app.scm.azurewebsites.net/olympic-app.git
+git remote add azure <insert URL you got from the previous command>
 
 # For "--deployment-local-git",
-# Unit, url=$(az webapp deployment source config-local-git --name olympic-cards --resource-group myResourceGroup --query url --output tsv)
+# Unix, url=$(az webapp deployment source config-local-git --name olympic-cards --resource-group myResourceGroup --query url --output tsv)
 # git remote add azure $url
 
 # For "--deployment-local-git",
-# Push you code to Azure and enter your password when asked. 
+# Push you code to Azure and enter your password from the deployment user set command previously when asked. 
 # Instead of 'main', you may want to choose your branch to push to Azure. 
-# master is required after your local branch to ensure it pushes to the branch read for Azure deployment
+# master is required after your local branch to ensure it pushes to the 'master' branch read for Azure deployment
 git push azure main:master
 
 # View (tail) logs
