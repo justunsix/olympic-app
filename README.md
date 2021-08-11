@@ -1,6 +1,6 @@
 # An app all about the 2020 Tokyo Olympics, postponed to Summer 2021!
 
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justintungonline/olympic-app)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/justunsix/olympic-app)
 
 ## Background
 
@@ -55,7 +55,7 @@ Log into [Azure portal](https://portal.azure.com/), open a new [cloud shell](htt
 az staticwebapp create \
     -n olympic-app \
     -g rg-eastus2 \
-    -s https://github.com/justintungonline/olympic-app \
+    -s https://github.com/justunsix/olympic-app \
     -l eastus2 \
     -b main \
     --app-location "dist" \
@@ -119,7 +119,7 @@ az appservice plan create --name olympic-cards --resource-group myResourceGroup 
 # Create and deploy web app service with Azure CLI command
 # Get run times using command: az webapp list-runtimes --linux
 # Use node 10+ per package-lock.json engines
-az webapp create --name olympic-cards --resource-group myResourceGroup --plan olympic-cards --runtime "NODE|14-lts" --deployment-source-url https://github.com/justintungonline/olympic-app.git --deployment-source-branch main
+az webapp create --name olympic-cards --resource-group myResourceGroup --plan olympic-cards --runtime "NODE|14-lts" --deployment-source-url https://github.com/justunsix/olympic-app.git --deployment-source-branch main
 
 # Set npm settings to include vite
 az webapp config appsettings set --name olympic-cards --resource-group myResourceGroup --settings NPM_CONFIG_PRODUCTION="false" 
