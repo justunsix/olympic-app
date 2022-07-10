@@ -10,6 +10,6 @@
 		"start": "vite --host --port 8080"
 	},
 	"devDependencies": {
-		"vite": "^2.3.3"
+		"vite": "^2.9.14"
 	}
 }
