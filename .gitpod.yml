@@ -1,3 +1,7 @@
 tasks:
   - init: npm install && npm run build
     command: npm run dev
+  - name: Open browser
+    command: |
+      gp ports await 5173
+      gp preview http://localhost:5173/
