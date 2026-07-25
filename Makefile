@@ -1,4 +1,4 @@
-SHELL := /bin/bash
+SHELL := bash
 
 .PHONY: help
 help: ## Show this help
